@@ -11,6 +11,14 @@
 |
 */
 
+use App\models\Post;
+
 Route::get('/', function () {
-    return view('home');
-});
+    $posts = Post::paginate(6);
+
+    return view('posts.home', [
+        "posts" => $posts,
+    ]);
+})->name("home");;
+
+Route::resource('/posts', 'PostController');

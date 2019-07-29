@@ -1,6 +1,6 @@
 @push("head")
     <nav class="navbar navbar-expand-lg navbar-primary bg-dark">
-        <a class="navbar-brand" href="">SymBlog</a>
+        <a class="navbar-brand" href="{{route('home')}}">LaravelPost</a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
@@ -8,7 +8,7 @@
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav mr-auto">
                 <li class="nav-item">
-                    <a class="nav-link" href="">Articles <span class="sr-only">(current)</span></a>
+                    <a class="nav-link" href="{{route("posts.index")}}">Articles <span class="sr-only">(current)</span></a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="">Create the article</a>

@@ -1,4 +1,4 @@
-@extends("layouts.base", ["title" => "Home"])
+@extends("layouts.base", ["title" => $post->title])
 
 @section("content")
 
@@ -15,5 +15,7 @@
             </div>
         </div>
     </div>
+    <a href="{{route('posts.edit', ['id' => $post->id])}}" class="btn btn-outline-warning">Edit</a>
+    <a href="{{route('posts.index')}}" class="btn btn-outline-info">Back</a>
 
 @stop
